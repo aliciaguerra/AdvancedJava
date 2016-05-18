@@ -83,7 +83,60 @@ Following example illustrates how extends is used in a general sense to mean eit
                             if(y.toCompare(max)>0){
                             max = y; //y is the largest so far
                             }
-                            if()
+                            if(z.compareTo(max)>0){
+                            max=z; //z is the largest now
+                            }
+                            return max; //returns the largest object
+                            }
+                            public static void main(String args[]) {
+                            System.out.printf("Max of %d %d and %d is %d\n\n", 3, 4, 5, maximum(3,4,5));
                             
+                            System.out.printf("Max of %.1, .%1, and %.1 is %.1f\n\n", 6.6, 8.8, 7.7, maximum(6.6,8.8,7.7));
+                            
+                            System.out.printf("Max of %s, %s, and %s is %s\n", "pear", "apple", "orange", maximum("pear","apple","orange"));
+                            }
+                            }
 
+RESULT
+
+                           maximum of 3, 4 and 5 is 5
+
+                           maximum of 6.6, 8.8 and 7.7 is 8.8
+
+                           maximum of pear, apple and orange is pear
+                           
+<h2>Generic Classes</h2>      
+A generic class declaration looks like a non-generic class declaration, except that the class name is followed by the class
+parameter section.
+
+As with generic methods, the type parameter section of a generic class can have one or more parameters separated by commas.
+These classes are known as parameterized classes or parameterized types because they accept one or more parameters.
+
+EXAMPLE
+
+                           public class Box<T>
+                           private T t;
+                           public void add(T t){
+                           this.t=t;
+                           }
+                           public T get(){
+                           return t;
+                           }
+                           
+                           public static void main(String args[]) {
+                           Box<Integer> integerBox = new Box<Integer>();
+                           Box<String> stringBox = new Box<String>();
+                           
+                           integerBox.add(new Integer(10));
+                           stringBox.add(new String("Hello World"));
+                           
+                           System.out.printf("Integer Value: %d\n\n", integerBox.get());
+                           System.out.printf("String Value: %s\n", stringBox.get());
+                               }
+                           }
+                           
+RESULT
+
+                           Integer Value :10
+                           String Value :Hello World
 
