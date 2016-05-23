@@ -78,3 +78,14 @@ EXAMPLE
                  System.out.print("\t" + m1);
                       }
                 }
+
+RESULT
+
+                           ArrayList Elements
+                          [Zara, Mahnaz, Ayan]
+                           LinkedList Elements
+                          [Zara, Mahnaz, Ayan]
+                           Set Elements
+                          [Zara, Mahnaz, Ayan]
+                          Map Elements
+                          {Mahnaz=31, Ayan=12, Daisy=14, Zara=8}
