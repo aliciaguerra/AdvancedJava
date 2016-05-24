@@ -20,3 +20,7 @@ Apart from the methods inherited from the parent classes, ArrayList defines the 
 - void add(int index, Object element)
   Inserts the specified element at the specified position index in this list. Throws IndexOutOfBoundsException if the 
   specified index is out of range (index<0||index>size())
+- boolean add(Object o)
+  Appends the specified amount to the end of the list
+- boolean addAll(Collection c)
+  Appends all of the elements in the specified collection to the end of this list, in the order that they are returned by the specified collection's iterator. Throws NullPointerException if the specified collection is null.
